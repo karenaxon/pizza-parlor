@@ -30,20 +30,18 @@ let toppings = [];
 
 $(document).ready(function(){
 
-  $("#size-selector").submit(function(event){
-    event.preventDefault();
+  $(".radio").click(function(){
+    // event.preventDefault();
     let pizzaSize = parseInt($("input:radio[name=size]:checked").val());
   });
 
-  $(".checkbox").click(function(event){
+  $("#toppings-selector").submit(function(event){
     event.preventDefault();
-    let checkbox = $("input:checkbox[name=toppings]:checked").val();
-    toppings.push(parseInt(checkbox));
-    console.log(toppings);
+    $("input:checkbox[name=toppings]:checked").each(function(){
+      let checkboxValue = $(this).val();
+      toppings.push(checkboxValue);
+    })
   })
-  
-
 })
 
-  
   
