@@ -30,8 +30,7 @@ Pizza.prototype.cost = function() {
 }
 
 
-let order1 = new Pizza(2, [1, 4, 7, 8, 9]);
-
+let order1 = new Pizza(2, [1, 4, 7, 8, 9, 11]);
 
 
 
