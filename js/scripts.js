@@ -27,28 +27,29 @@ Pizza.prototype.cost = function() {
 
 
 $(document).ready(function(){
+  let pizzaSize;
   let toppings = [];
-  let pizzaSize = 0;
+  console.log("size: " + pizzaSize);
 
-  $(".radio").click(function(event){
-    event.preventDefault();
-    pizzaSize = parseInt($("input:radio[name=size]:checked").val());
-    console.log("size 2 : " + pizzaSize);
-  });
-
-  $("#toppings-selector").submit(function(event){
+  $("form#selector").submit(function(event){
     event.preventDefault();
     $("input:checkbox[name=toppings]:checked").each(function(){
       let checkboxValue = $(this).val();
-      toppings.push(checkboxValue);
+      toppings.push(parseInt(checkboxValue));
     })
-  })
 
-  // Create a new order
+    pizzaSize = (parseInt($("input:radio[name=size]:checked").val()));
+    console.log(pizzaSize);
+  });
   let order1 = new Pizza(pizzaSize, toppings);
-  console.log(order1);
-  console.log("from bottom: " + pizzaSize); 
-
+  console.log(pizzaSize);
+  // console.log(order1);
 })
+
+
+
+
+
+
   
 
