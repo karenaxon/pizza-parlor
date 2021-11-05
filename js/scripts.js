@@ -32,6 +32,18 @@ $(document).ready(function(){
   $("#size-selector").submit(function(event){
     event.preventDefault();
     let pizzaSize = parseInt($("input:radio[name=size]:checked").val());
+  });
+
+  $("#toppings-selector").submit(function(event){
+    event.preventDefault();
+    let toppings = [];
+    $("input:[name='toppings']:checked").each(function(){
+      toppings.push(parseInt(this.value));
+    });
+
+    // toppings.push(parseInt(checkbox.value));
+
+    console.log(checkbox.value);
   })
   
 
