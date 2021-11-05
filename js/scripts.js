@@ -38,6 +38,7 @@ $(document).ready(function(){
 
     pizzaSize = (parseInt($("input:radio[name=size]:checked").val()));
     let order1 = new Pizza(pizzaSize, toppings);
+    $("#display-cost").text("The total of your order is $" + order1.cost()).show();
   });
 })
 
