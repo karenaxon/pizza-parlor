@@ -2,3 +2,13 @@
   display: none;
   background-color: aquamarine;
 }
+
+#main-title {
+  padding-top: 4rem;
+  font-family: monospace;
+  font-size: 10rem;
+  color: aquamarine;
+  font-weight: bolder;
+  background-image: url("../images/cartoon-man.jpeg");
+  background-repeat: no-repeat;
+}
