@@ -25,14 +25,15 @@ Pizza.prototype.cost = function() {
   return sum;
 }
 
-let order1 = new Pizza(2, [1, 4, 7, 8, 9, 11]);
-let toppings = [];
 
 $(document).ready(function(){
+  let toppings = [];
+  let pizzaSize = 0;
 
-  $(".radio").click(function(){
-    // event.preventDefault();
-    let pizzaSize = parseInt($("input:radio[name=size]:checked").val());
+  $(".radio").click(function(event){
+    event.preventDefault();
+    pizzaSize = parseInt($("input:radio[name=size]:checked").val());
+    console.log("size 2 : " + pizzaSize);
   });
 
   $("#toppings-selector").submit(function(event){
@@ -42,6 +43,12 @@ $(document).ready(function(){
       toppings.push(checkboxValue);
     })
   })
-})
 
+  // Create a new order
+  let order1 = new Pizza(pizzaSize, toppings);
+  console.log(order1);
+  console.log("from bottom: " + pizzaSize); 
+
+})
   
+
