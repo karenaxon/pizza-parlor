@@ -25,11 +25,9 @@ Pizza.prototype.cost = function() {
   return sum;
 }
 
-
 $(document).ready(function(){
   let pizzaSize;
   let toppings = [];
-  console.log("size: " + pizzaSize);
 
   $("form#selector").submit(function(event){
     event.preventDefault();
@@ -39,11 +37,8 @@ $(document).ready(function(){
     })
 
     pizzaSize = (parseInt($("input:radio[name=size]:checked").val()));
-    console.log(pizzaSize);
+    let order1 = new Pizza(pizzaSize, toppings);
   });
-  let order1 = new Pizza(pizzaSize, toppings);
-  console.log(pizzaSize);
-  // console.log(order1);
 })
 
 
