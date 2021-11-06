@@ -1,14 +1,13 @@
-#display-cost {
-  display: none;
-  background-color: aquamarine;
-}
-
 #main-title {
   padding-top: 4rem;
+  padding-left: 10rem;
   font-family: monospace;
-  font-size: 10rem;
+  font-size: 8rem;
   color: aquamarine;
   font-weight: bolder;
+}
+
+#pizza-man {
   background-image: url("../images/cartoon-man.jpeg");
   background-repeat: no-repeat;
 }
@@ -18,5 +17,10 @@
 }
 
 #display-cost {
+  display: none;
+  background-color: aquamarine;
+  font-family: monospace;
   padding: 2rem;
+  color: white;
+  font-size: 2rem;
 }
