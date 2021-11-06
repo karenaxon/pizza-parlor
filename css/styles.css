@@ -12,3 +12,11 @@
   background-image: url("../images/cartoon-man.jpeg");
   background-repeat: no-repeat;
 }
+
+#toppings-title {
+  margin-top: .5rem;
+}
+
+#display-cost {
+  padding: 2rem;
+}
