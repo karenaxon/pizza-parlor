@@ -19,6 +19,17 @@ A website where a user can choose one or more individual toppings (cheese, peppe
 * Click on the green "Code" button and copy the repository URL.
 * Open your terminal and use the command: git clone https://github.com/karenaxon/pizza-parlor.git into the directory you would like to clone the repository.
 * Open in your favorite text editor to view code and make changes.
+  
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+
+## Using the Application
+After following the Setup/Installation steps above: 
+  * Open a new tab in Google Chrome.
+  * From the File dropdown menu select Open.
+  * Navigate to the folder that contains the cloned repository and select the index.html file. 
+  * Select Open.
+  
+Conversely, you can use it through this [link](https://karenaxon.github.io/pizza-parlor/).
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
