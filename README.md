@@ -57,13 +57,11 @@ Copyright (c) November, 2021 - Karen Axon
   let order1 = new Pizza(1, [1, 11]);
   order1.size;
   Expected Output: 1
-```
 
-**Pizza.prototype.cost = function()**
-```
+// Test #2
   Test: It should return the price of the pizza as $19
   Code: 
-  let let order1 = new Pizza(2, [1, 4, 7, 8, 9]);
-  order1.cost();
+  let order1 = new Pizza(2, [1, 4, 7, 8, 9]);
+  order1.cost;
   Expected Output: $19
 ```
