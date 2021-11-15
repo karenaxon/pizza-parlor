@@ -49,12 +49,14 @@ Copyright (c) November, 2021 - Karen Axon
 ## Tests
 
 **Describe: Pizza ()**
+
 ```
-  Test: It should return an object with properties toppings and size.
+// Test #1
+  Test: It should return size 1.
   Code: 
-  let order1 = new Pizza;
+  let order1 = new Pizza(1, [1, 11]);
   order1.size;
-  Expected Output: undefined
+  Expected Output: 1
 ```
 
 **Pizza.prototype.cost = function()**
