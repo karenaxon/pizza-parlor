@@ -13,14 +13,16 @@
 </head>
 <body>
   <div class="container">
-    <div id="pizza-man">
+    <div id="bg"></div>
+    <div id="pizza-man" class="container">
       <h1 id="main-title">Pizza’joy!</h1>
     </div>
-    <div id="options-display">
+    <div id="options-display" class="container">
       <form id="selector">
-        <h4>Select a size for your pizza
+        <!-- <div id="green-line">Start your order here</div> -->
+        <h5>Select a size for your pizza
           <small class="text-muted"> | see prices below</small>
-        </h4>
+        </h5>
         <div class="radio">
           <label>
             <input type="radio" name="size" value="1">
@@ -39,9 +41,9 @@
             Large <small class="text-muted">(12 inches)</small> $12
           </label>
         </div>
-        <h4 id="toppings-title">Select the toppings for your pizza 
+        <h5 id="toppings-title">Select the toppings for your pizza 
           <small class="text-muted"> | additional charges apply</small>
-        </h4>
+        </h5>
         <div class="checkbox">
           <label>
             <input type="checkbox" name="toppings" value="1">
@@ -112,6 +114,7 @@
       </form>
     </div>
     <div class="text-center=" id="display-cost"></div>
+    <div class="text-center=" id="output"></div>
   </div>
 </body>
 </html>

@@ -27,19 +27,39 @@ Pizza.prototype.cost = function() {
 }
 
 $(document).ready(function(){
-  let pizzaSize;
-  let toppings = [];
-
-  $("form#selector").submit(function(event){
+  $("form#selector").submit(function(event){  
     event.preventDefault();
-    $("input:checkbox[name=toppings]:checked").each(function(){
-      let checkboxValue = $(this).val();
-      toppings.push(parseInt(checkboxValue));
-    })
+    $("#display-cost").hide();
+    let pizzaSize;
+    let toppings = [];
 
-    pizzaSize = (parseInt($("input:radio[name=size]:checked").val()));
-    let order1 = new Pizza(pizzaSize, toppings);
-    $("#display-cost").text("The total of your order is $" + order1.cost()).show();
+    $("input").on("click", function(){
+      $("#output").hide();
+      $("#display-cost").hide();
+    })
+    
+    if ($("input:checkbox[name=toppings]:checked").filter(':checked').length > 0){
+      $("input:checkbox[name=toppings]:checked").each(function(){
+        let checkboxValue = $(this).val();
+        toppings.push(parseInt(checkboxValue));
+      });
+    } else {
+      $("#output").text("Please make a selection!").show();
+      $("form").trigger('reset');
+    }
+    
+    if ($("input:radio[name=size]:checked").length > 0){  
+      pizzaSize = (parseInt($("input:radio[name=size]:checked").val()));
+    } else {
+      $("#output").text("Please make a selection!").show();
+      $("form").trigger('reset');
+    }
+    
+    if (pizzaSize > 0 && toppings.length > 0) {
+      let order1 = new Pizza(pizzaSize, toppings); 
+      $("#display-cost").text("The total of your order is $" + order1.cost).show();
+      $("form").trigger('reset');
+    }
   });
 })
 
